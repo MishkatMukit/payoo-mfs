@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200 px-4">
+        <header>
+            <nav class="flex items-center justify-between  ">
+                <div class="flex gap-2">
+                    <img class="w-16" src="assets/Group.png" alt="">
+                    <div>
+                        <h1 class="font-extrabold text-2xl mb-1">$<span id="main-balance">45000</span></h1>
+                        <p>Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="p-2 bg-slate-100 rounded-lg">Log Out</button>
+                </div>
+            </nav>
+            <section class="mt-10">
+                <h1 class="font-bold text-2xl mb-2">🔥 Welcome to Payooo!</h1>
+                <p class="text-slate-500">Enjoy easy and convenient financial services with us. Cashout charge is low
+                    and </p>
+                <div class="cards grid grid-cols-3 mt-4 gap-2 p-2">
+                    <div id="add-money-box" class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
+                        <h3 class="text-sm font-semibold">Add Money</h3>
+                    </div>
+                    <div id="cashout-box" class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
+                        <h3 class="text-sm font-semibold">Cashout</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
+                        <h3 class="text-sm font-semibold">TransferMoney</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
+                        <h3 class="text-sm font-semibold">Get Bonus</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
+                        <h3 class="text-sm font-semibold">Pay Bill</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm bg-slate-50 hover:cursor-pointer hover:scale-105 transition-all">
+                        <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                        <h3 class="text-sm font-semibold">Transactions</h3>
+                    </div>
+                </div>
+                <section id="add-money-form">
+                    <h2 class="font-bold mx-4">Add Money</h2>
+                    <div class="card-body w-full">
+                        <fieldset class="fieldset">
+                            <label class="label font-bold"> Choose Bank</label>
+                            <select class="select w-full rounded-sm border-none hover:scale-[1.02] transition-all">
+                                <option disabled selected>Choose Bank</option>
+                                <option value="bkash">Bkash</option>
+                                <option value="nagad">Nagad</option>
+                                <option value="dbbl">DBBL</option>
+                            </select>
+                            <label class="label font-bold">Account Number</label>
+                            <input value="" id="acc-number" type="number" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
+                                placeholder="Type your Number" required />
+                            <label class="label font-bold">Amount to add</label>
+                            <input value="" id="amount" type="number" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all" placeholder="Type your amount"
+                                required />
+                            <label class="label font-bold">Pin Number</label>
+                            <input value="" id="pin-number" type="text" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all" placeholder="Type your Pin"
+                                required />
+                            <button id="btn-add-money" class="btn bg-blue-600
+                            text-amber-50 font-bold  mt-4 hover:scale-[1.02] transition-all">Add money</button>
+                        </fieldset>
+                    </div>
+                </section>
+                <section id="cashout-form">
+                    <h2 class="font-bold mx-4">CashOut</h2>
+                    <div class="card-body w-full">
+                        <fieldset class="fieldset">
+                        
+                            <label class="label font-bold">Account Number</label>
+                            <input value="" id="acc-number" type="number" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
+                                placeholder="Type your Number" required />
+                            <label class="label font-bold">Amount to cashout</label>
+                            <input value="" id="cashout-amount" type="number" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all" placeholder="Type your amount"
+                                required />
+                            <label class="label font-bold">Pin Number</label>
+                            <input value="1234" id="cashout-pin" type="text" class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all" placeholder="Type your pin"
+                                required />
+                            <button id="btn-cashout" class="btn bg-blue-600
+                            text-amber-50 font-bold  mt-4 hover:scale-[1.02] transition-all">Confirm</button>
+                        </fieldset>
+                    </div>
+                </section>
+            </section>
+        </header>
+    </section>
+
+
+    <script src="./script/add-money.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashout.js"></script>
+</body>
+
+</html>
