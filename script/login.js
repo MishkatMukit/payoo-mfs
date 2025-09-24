@@ -1,4 +1,5 @@
-document.getElementById('btn-login').addEventListener('click', function(event){
+document.getElementById('btn-login').addEventListener('click',
+    function(event){
     // console.log('hello js')
     event.preventDefault()
     const accNum = document.getElementById('acc-number').value;
