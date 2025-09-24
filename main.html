@@ -16,7 +16,7 @@
                 <div class="flex gap-2">
                     <img class="w-16" src="assets/Group.png" alt="">
                     <div>
-                        <h1 class="font-extrabold text-2xl mb-1">$<span id="main-balance">45000</span></h1>
+                        <h1 class="font-extrabold text-2xl mb-1">$<span id="main-balance">350</span></h1>
                         <p>Available Balance</p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                                 <option value="DBBL">DBBL</option>
                             </select>
                             <label class="label font-bold">Account Number</label>
-                            <input value="01889872845" id="acc-number" type="number"
+                            <input title="11 digit Mobile Number" id="acc-number" type="number"
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your Number" required />
                             <label class="label font-bold">Amount to add</label>
@@ -81,7 +81,7 @@
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your amount" required />
                             <label class="label font-bold">Pin Number</label>
-                            <input value="1234" id="pin-number" type="text"
+                            <input title="Hint: 1234" id="pin-number" type="text"
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your Pin" required />
                             <button type="submit" id="btn-add-money" class="btn bg-blue-600
@@ -96,7 +96,7 @@
                         <fieldset class="fieldset">
 
                             <label class="label font-bold">Account Number</label>
-                            <input value="01889872845" id="cash-account-number" type="number"
+                            <input title="11 digit Mobile Number" id="cash-account-number" type="number"
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your Number" required />
                             <label class="label font-bold">Amount to cashout</label>
@@ -104,7 +104,7 @@
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your amount" />
                             <label class="label font-bold">Pin Number</label>
-                            <input value="1234" id="cashout-pin" type="text"
+                            <input title="Hint: 1234" id="cashout-pin" type="text"
                                 class="input w-full rounded-sm border-none hover:scale-[1.02] transition-all"
                                 placeholder="Type your pin" required />
                             <button id="btn-cashout" class="btn bg-blue-600
@@ -117,7 +117,7 @@
                     <h1 class="text-2xl font-bold text-red-700 p-4 text-center">Transaction History</h1>
                     <div id="history-container" class="p-4 mx-3 bg-slate-50 rounded-sm">
                         <div class="bg-slate-200 p-2 mb-2 rounded-sm">
-                            <p class="font-semibold">Added $45000 as beginning balance</p>
+                            <p class="font-semibold">Added $350 as beginning balance</p>
                         </div>
                     </div>
                 </section>
